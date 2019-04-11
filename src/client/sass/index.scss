@@ -1,0 +1,150 @@
+@import './layout.scss';
+
+html, body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgb(238, 238, 238);
+    min-width: 350px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, p{
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.app{
+    background-color: rgb(233, 233, 233);
+    padding: 20px;
+    margin-top: 20px;
+    width: 700px;
+}
+
+.chat-room{
+    width: 600px;
+    margin: 0 auto; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+
+    h2{
+        margin-bottom: 10px;
+    }
+
+    form{
+        width: 100%;
+
+        input[type="text"]{
+            width: calc(100% - 80px);
+            height: 40px;
+            border: 1px solid lightgray;
+            border-left: none;
+            border-radius: 0 0 6px 0;
+            padding: 5px;
+            font-size: 24px;
+        }
+
+        button{
+            width: 80px;
+            height: 40px;
+            border-radius: 0 0 0 6px;
+        }
+    }    
+}
+
+.messages{    
+    height: 400px;
+    overflow-y: auto;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+    border-top: 1px solid lightgray;
+    
+}
+
+.message{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: rgb(253, 253, 253);
+
+    &:first-child{
+        margin-top: 0;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    small{
+        color: rgb(119, 119, 119);
+    }
+}
+
+button{
+    border: none;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 3px;
+    outline: none;
+
+    &:hover{
+        background-color: lighten($color: dodgerblue, $amount: 10);
+    }
+
+    &:active{
+        background-color: lighten($color: dodgerblue, $amount: 15);
+    }
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.home-chat-room{
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+
+    .left{
+        max-width: 70%;
+    }
+
+    &::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    &:hover{
+        background-color: #313131;
+        color: white;
+    }
+}
